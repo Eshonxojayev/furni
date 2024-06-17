@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'core',
     'billing',
     'customers',
+    'products',
     'account',
     'drf_spectacular',
 
