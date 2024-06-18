@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'furni',
     'core',
-    'billing',
     'customers',
     'products',
     'account',

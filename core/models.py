@@ -38,6 +38,15 @@ class Product(models.Model):
     def __str__(self) -> str:
         return self.name
 
+class Cart(models.Model):
+    title = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    create_date = models.DateField(auto_now=True)
+    last_update = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title.name
+
 
 class Rate(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rate')
